@@ -10,7 +10,7 @@ app.get("/getName", (req, res) => {
 });
 
 app.get("/calculateAmt", (req, res) => {
-  const numOfDays = req.query?.numOfDays || 0;
+  const { numOfDays } = req.query;
   const calculatedAmount = 483 * numOfDays;
 
   setTimeout(() => {
